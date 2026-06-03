@@ -11,7 +11,7 @@
     <h1>WEB INFORMATIKA</h1>
     <hr />
     
-    <table border="1px" cellspacing="0" cellpadding="10" >
+    <table  border="1px" cellspacing="0" cellpadding="10" >
       <tr>
         <td>
           <a href="index.php">Home</a>

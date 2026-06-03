@@ -1,14 +1,43 @@
+<?php
+
+$koneksi = mysqli_connect("localhost","root","","ifOPLweekly");
+// if($koneksi)
+// {
+  // echo "BERHASIL";
+// }
+
+
+$query = "SELECT * FROM mahasiswa";
+$result = mysqli_query($koneksi, $query);
+
+//ambil data mahasiswa (fatch) dari lemari
+
+//mysqli_fatch_row
+//mysqli_fatch_assoc
+//mysqli_fatch_object
+//mysqli_fatch_array
+
+// while ($mhs = mysqli_fetch_array($result))
+//   {
+//   var_dump($mhs);
+//   }
+
+?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Data Mahasiwa</title>
   </head>
   <body>
     <h1>WEB INFORMATIKA</h1>
     <hr />
-    <table border="1px" cellspacing="0" cellpadding="10">
+    <table class border="1px" cellspacing="0" cellpadding="10">
       <tr>
         <td>
           <a href="index.php">Home</a>
@@ -39,21 +68,26 @@
         <th> No. Hp </th>
         <th> foto</th>
       </tr>
-      <tr>
-        <th>UTS</th>
-        <th>UAS</th>
-        <th>TUGAS</th>
-      </tr>
+      <?php
+      $i = 1;
+      while($mhs = mysqli_fetch_assoc($result))
+        {
+      ?>
+      
       <tr>
         <td align="center">1</td>
-        <td>Muhammad Naufal Rozaan</td>
-        <td align="center">13182420011</td>
-        <td><img src="assets/images/1000033615.jpg" width="70" /></td>
-        <td align="center">90</td>
-        <td align="center">90</td>
-        <td align="center">90</td>
+        <td><?php echo $mhs["nama"]?></td>
+        <td align="center"><?php echo $mhs["nim"]?></td>
+        <td><?php echo $mhs["jurusam"]?></td>
+        <td align="center"><?php echo $mhs["email"]?></td>
+        <td align="center"><?php echo $mhs["no_hp"]?></td>
+        <td align="center"><img src="assets/images/<?php echo $mhs["foto"] ?>" width="70px"/></td>
         <td><a href="editdata.php"><button>Edit</button></a> <a href="deletedata.php"><button>delete</button></a></td>
       </tr>
+      <?php 
+      $i++;
+        }
+      ?>
     </table>
     <br />
     <hr />
