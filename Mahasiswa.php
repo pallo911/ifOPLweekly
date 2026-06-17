@@ -1,6 +1,7 @@
 <?php
 
 
+
 require 'fungsi.php';
 $qmahasiswa = "SELECT * FROM mahasiswa";
 $mahasiswas = tampildata($qmahasiswa); // wadah dengan data mahssiswa
@@ -9,14 +10,22 @@ $mahasiswas = tampildata($qmahasiswa); // wadah dengan data mahssiswa
 
 
 // $koneksi = mysqli_connect("localhost","root","","ifOPLweekly");
+
+$koneksi = mysqli_connect("localhost","root","","ifOPLweekly");
+
 // if($koneksi)
 // {
   // echo "BERHASIL";
 // }
 
 
+
 // $query = "SELECT * FROM mahasiswa";
 // $result = mysqli_query($koneksi, $query);
+
+$query = "SELECT * FROM mahasiswa";
+$result = mysqli_query($koneksi, $query);
+
 
 //ambil data mahasiswa (fatch) dari lemari
 
@@ -39,15 +48,21 @@ $mahasiswas = tampildata($qmahasiswa); // wadah dengan data mahssiswa
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="assets\css\style.css">
     
+
     
     <title>Data Mahasiwa</title>
   </head>
   <body>
     <h1>WEB INFORMATIKA</h1>
     <hr />
+
     <table class ="mh" border="1px" cellspacing="0" cellpadding="10">
+
+    <table class border="1px" cellspacing="0" cellpadding="10">
+
       <tr>
         <td>
           <a href="index.php">Home</a>
@@ -61,9 +76,12 @@ $mahasiswas = tampildata($qmahasiswa); // wadah dengan data mahssiswa
         <td>
           <a href="Mahasiswa.php">Data Mahasiswa</a>
         </td>
+
         <td>
           <a href="Inputdata.php">Input Data Mahasiswa</a>
         </td>
+
+
       </tr>
     </table>
     <h2>Data Mahasiswa</h2>
@@ -71,7 +89,11 @@ $mahasiswas = tampildata($qmahasiswa); // wadah dengan data mahssiswa
       <button>Input data mahasiswa</button>
     </a>
 
+
     <table class="mahasiswa" border="1" cellpadding="5px">
+
+    <table border="1" cellpadding="5px">
+
       <tr>
         <th >No</th>
         <th >Nama</th>
@@ -83,9 +105,13 @@ $mahasiswas = tampildata($qmahasiswa); // wadah dengan data mahssiswa
       </tr>
       <?php
       $i = 1;
+
       // while($mhs = mysqli_fetch_assoc($result))
       //   {
       foreach($mahasiswas as $mhs)
+
+      while($mhs = mysqli_fetch_assoc($result))
+
         {
       ?>
       
@@ -100,14 +126,22 @@ $mahasiswas = tampildata($qmahasiswa); // wadah dengan data mahssiswa
         <td><a href="editdata.php"><button>Edit</button></a> <a href="deletedata.php"><button>delete</button></a></td>
       </tr>
       <?php 
+
       // $i++;
       
+
+      $i++;
+
         }
       ?>
     </table>
     <br />
     <hr />
+
     <table class="mahasiswa" border="1" cellpadding="5px">
+
+    <table border="1" cellpadding="5px">
+
       <tr>
         <td>50</td>
         <td>59</td>

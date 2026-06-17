@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -30,17 +31,22 @@ $foto = $_POST["Foto"];
   }
 ?>
 
+=======
+>>>>>>> b78e5d08f9f77abea90fd46833709340b218043c
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="assets\css\style.css">
    
+
     <title>Tambah Data Mahasiswa</title>
 </head>
 <body>
     <h2>Tambah Data Mahasiswa</h2>
+
     
     <hr />
     
@@ -66,6 +72,10 @@ $foto = $_POST["Foto"];
     
     <form action="" method="post">
         <table colpadding="5px"  >
+=======
+    <form >
+        <table>
+>>>>>>> b78e5d08f9f77abea90fd46833709340b218043c
             <tr>
                 <td><label for="nama">Nama</label> 
                     <td>:</td>
@@ -77,6 +87,7 @@ $foto = $_POST["Foto"];
                     <td><input type="text" name="Nim" id="Nim" /></td>
             </tr>
              <tr>
+
                 <td><label for="jurusan">Jurusan</label> 
                     <td>:</td>
                     <td><input type="text" name="jurusan" id="jurusan" /></td>
@@ -99,6 +110,28 @@ $foto = $_POST["Foto"];
         </table>
         <button type="submit" name="kirim" >Tambah Data</button>
         
+
+                <td><label for="foto">Foto</label> 
+                    <td>:</td>
+                    <td><input type="file" name="Foto" id="Foto" /></td>
+            </tr>   
+            <tr>
+                <td><label for="Nilai">UTS</label> 
+                    <td>:</td>
+                    <td><input type="text" name="Nilai" id="Nilai" /></td>
+            </tr>   
+             <tr>
+                <td><label for="Nilai">UAS</label> 
+                    <td>:</td>
+                    <td><input type="text" name="Nilai" id="Nilai" /></td>
+            </tr>   
+             <tr>
+                <td><label for="Nilai">TUGAS</label> 
+                    <td>:</td>
+                    <td><input type="text" name="Nilai" id="Nilai" /></td>
+            </tr>   
+        </table>
+
     </form>
     
     

@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <<link rel="stylesheet" href="assets\css\style.css">
+
     <title>Profile</title>
   </head>
   <body>
@@ -20,12 +22,14 @@
         <td>
           <a href="contact.php">Contact</a>
         </td>
+
         <td>
           <a href="Mahasiswa.php">Data Mahasiswa</a>
         </td>
         <td>
           <a href="Inputdata.php">Input Data Mahasiswa</a>
         </td>
+
       </tr>
     </table>
   </body>
