@@ -1,19 +1,17 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background-color: #f4f6f8;
   color: #333;
 }
 
 h1 {
   text-align: center;
-
- }
+}
 
 table {
   width: 100%;
   background-color: #c0b7b7;
- 
 }
 
 .mahasiswa {
@@ -21,22 +19,14 @@ table {
   background-color: white;
 }
 
-.id{
+.id {
   background-color: white;
 }
-
- 
-  
-  
-
 
 table {
   width: 100%;
   background-color: #333;
 }
-
-
-
 
 td {
   text-align: center;
@@ -53,7 +43,6 @@ td a {
 td a:hover {
   background-color: #555;
   border-radius: 10%;
-  
 }
 
 h2 {
@@ -62,7 +51,7 @@ h2 {
 }
 
 h3 {
-    text-align: center;
+  text-align: center;
   margin-top: 30px;
 }
 
@@ -70,7 +59,7 @@ img {
   display: block;
   margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 p {
@@ -90,7 +79,7 @@ ul li {
   margin: 10px 0;
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h4 {
