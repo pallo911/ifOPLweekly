@@ -123,7 +123,9 @@ $result = mysqli_query($koneksi, $query);
         <td align="center"><?php echo $mhs["email"]?></td>
         <td align="center"><?php echo $mhs["no_hp"]?></td>
         <td align="center"><img src="assets/images/<?php echo $mhs["foto"] ?>" width="70px"/></td>
-        <td><a href="editdata.php"><button>Edit</button></a> <a href="deletedata.php"><button>delete</button></a></td>
+        <td><a href="editdata.php?id=<?= $mhs["id"] ?>"><button>Edit</button></a> 
+        <a href="deletedata.php?id=<?= $mhs["id"] ?>" onclick="return confirm ('Yakinnn??')"
+        ><button>delete</button></a></td>
       </tr>
       <?php 
 
@@ -134,36 +136,4 @@ $result = mysqli_query($koneksi, $query);
 
         }
       ?>
-    </table>
-    <br />
-    <hr />
-
-    <table class="mahasiswa" border="1" cellpadding="5px">
-
-    <table border="1" cellpadding="5px">
-
-      <tr>
-        <td>50</td>
-        <td>59</td>
-        <td>50</td>
-        <td>52</td>
-      </tr>
-      <tr>
-        <td>50</td>
-        <td colspan="2" rowspan="2">FAAAH</td>
-
-        <td>52</td>
-      </tr>
-      <tr>
-        <td>60</td>
-        <td>50</td>
-      </tr>
-      <tr>
-        <td>50</td>
-        <td>59</td>
-        <td>50</td>
-        <td>52</td>
-      </tr>
-    </table>
-  </body>
-</html>
+    
