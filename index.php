@@ -59,7 +59,7 @@
       utama kesuksesan. Melalui situs ini, kami mengundang Anda untuk mengenal
       lebih jauh komitmen kami dalam menciptakan nilai tambah bagi seluruh
       pemangku kepentingan. Terima kasih telah menjadi bagian dari perjalanan
-      kami menuju masa depan yang lebih baik. bismillah
+      kami menuju masa depan yang lebih baik. bismillah alhamdulilah
     </h4>
   </body>
 </html>

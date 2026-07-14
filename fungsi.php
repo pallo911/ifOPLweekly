@@ -134,11 +134,25 @@ return false;
 
 function login($data)
 {
-    $password1 = mysqli_real_escape_string($koneksi,$data["password1"]);
+    global $koneksi;
 
-    $row = mysqli_fetch_assoc($result);
-    password_verify($data["password"],$row["password"]);
+    $username = mysqli_real_escape_string($koneksi, $data["username"]);
+    $password = $data["password"];
 
-    $_SESSION;
+    $query  = "SELECT * FROM user WHERE username='$username'";
+    $result = mysqli_query($koneksi, $query);
+
+    if ($result && mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+
+        if (password_verify($password, $row["password"])) {
+            $_SESSION["login"]    = true;
+            $_SESSION["id"]       = $row["id"];
+            $_SESSION["username"] = $row["username"];
+            return true;
+        }
+    }
+
+    return false;
 }
 ?>
